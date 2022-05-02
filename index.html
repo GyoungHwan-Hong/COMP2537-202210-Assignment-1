@@ -13,7 +13,8 @@
             }
 
             #nav_container {
-                align-items:stretch;
+                display: flex;
+                justify-content: space-between;
             }
 
         </style>
@@ -25,6 +26,7 @@
 
         <nav>
         <grid id="nav_container">
+            <grid id="left_side_grid_for_nav">
                 <a href="">
                     1 LINK
                 </a>
@@ -34,9 +36,12 @@
                 <a href="">
                     3 LINK
                 </a>
+            </grid>
+            <grid id="right_side_grid_for_nav">
                 <a href="">
                     4 LINK
                 </a>
+            </grid>
             </grid>
         </nav>
 

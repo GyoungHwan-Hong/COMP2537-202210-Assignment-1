@@ -9,8 +9,17 @@
 <body>
     <h1> Hi there.
 
-        This poemon has the id: <%= id %>
+        This pokemon has the id: <%= id %>
+        <br>
+        This pokemon name : <%= name %>
+        <br>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/<%= id %>.png" alt="">
+        <br>
 
+        Stats.
+
+        The HP is 
+        <progress id ="file" value="<%= hp %>" max="255"> <%= hp %> %</progress>
 
     </h1>
 </body>

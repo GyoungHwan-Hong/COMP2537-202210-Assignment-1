@@ -39,3 +39,8 @@ function setup() {
 }
 
 $(document).ready(setup)
+
+
+function handleOnInput(e)  {
+    e.value = e.value.replace(/[^A-Za-z]/ig, '')
+  }

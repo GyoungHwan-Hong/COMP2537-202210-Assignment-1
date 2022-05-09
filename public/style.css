@@ -4,7 +4,7 @@ body {
 
 .img_box a, img {
     display: flex;
-    font-size: 50px;   
+    font-size: 50px;
     flex-wrap: wrap;
     align-items: baseline;
     justify-content: center;
@@ -12,7 +12,6 @@ body {
 
 
 select {
-
     height: 40px;
     width: 150px;
 }
@@ -34,7 +33,7 @@ p {
     font-style: normal;
 }
 
-.img_box { 
+.img_box {
     height: auto;
     width: auto;
     border: 1px solid black;
@@ -125,6 +124,7 @@ button {
         align-items: center;
         width: 100%;
     }
+
     .nav_container .search_input {
         flex-direction: column;
         align-items: center;
@@ -140,8 +140,9 @@ button {
         width: 100%;
         flex-direction: column;
         width: 100%;
-        border:#333 solid 2px;
+        border: #333 solid 2px;
     }
+
     .search_input button {
         height: 50px;
         text-align: center;

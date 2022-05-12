@@ -1,29 +1,34 @@
 
 type_g = ""
 
-function processPokemonResp(data) {
+to_add = ''
 
+function processPokemonResp(data) {
     for (i=0; i < data.types.length; i++)      //for (x in data.types)
-        if(data.types[i].type.name == type_g)
-            $("main").append("<p>" + data.id + "</p>")
+        if(data.types[i].type.name == type_g) {
+            to_add += `<div class="img_box">
+            <a href="/profile/${data.id}">${data.name}</a>
+            <img src="${data.sprites.other["official-artwork"].front_default}">
+            </div>`
+        }
 }
 
 
 function display(type_){
 
-    type_g = type_
-
     $("main").empty();
 
     type_g = type_
 
-    for (i = 1 ; i < 100; i++) {
+    for (i = 1 ; i < 255; i++) {
         $.ajax({
             type: "get",
             url: `https://pokeapi.co/api/v2/pokemon/${i}`,
             success: processPokemonResp
         })
     }
+
+    $("main").html(to_add)
 
 }
 

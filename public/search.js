@@ -1,4 +1,3 @@
-
 type_g = ""
 
 to_add = ''
@@ -33,13 +32,30 @@ function display(type_){
 }
 
 
+function insertSearchEventToTheTimeLine(poke_type) {
+    $.ajax({
+        url: "http://localhost:5000/timeline/insert",
+        type: "put",
+        data: {
+            text: `Client has searched for ${poke_type}`,
+            time: "at time T",
+            hits: 1
+        },
+        success: function(r) {
+            console.log(r)
+        }
+    })
+}
+
 function setup() {
 
     display($("#poke_type option:selected").val())
     // display all the grass type pokemon
     $("#poke_type").change(() => {
         poke_type = $("#poke_type option:selected").val();
-        display($("#poke_type option:selected").val())
+        //display($("#poke_type option:selected").val())
+
+        insertSearchEventToTheTimeLine(poke_type)
     })
 }
 

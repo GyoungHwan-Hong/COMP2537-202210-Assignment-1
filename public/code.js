@@ -23,11 +23,11 @@ async function loadNineImages() {
         // 2. init a AJAX request to pokeapi.co
         // 3. process the reponse extract the img
 
-        x = Math.floor(Math.random() * 100) + 1
+        x = Math.floor(Math.random() * 10) + 1
 
         await $.ajax({
             type: "GET", 
-            url: `https://pokeapi.co/api/v2/pokemon/${x}/`,
+            url: `https://serene-lowlands-99039.herokuapp.com/${x}/`,
             success: processPokeResp
         })
 

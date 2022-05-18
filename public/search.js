@@ -19,10 +19,10 @@ function display(type_){
 
     type_g = type_
 
-    for (i = 1 ; i < 255; i++) {
+    for (i = 1 ; i < 10; i++) {
         $.ajax({
             type: "get",
-            url: `https://pokeapi.co/api/v2/pokemon/${i}`,
+            url: `https://serene-lowlands-99039.herokuapp.com/${i}`,
             success: processPokemonResp
         })
     }

@@ -19,7 +19,7 @@ app.listen(process.env.PORT || 5000, function (err) {
 })
 
 
-app.use(session({ secret: 'ssshhh', saveUninitialized: true, resave: ture }))
+app.use(session({ secret: 'ssshhh', saveUninitialized: true, resave: true }))
 
 
 function logger1 (){
@@ -33,13 +33,13 @@ app.use(bodyparser.urlencoded({
 }))
 
 
-app.get('/', function (req, res) {
-  if (req.session.authenticated)
-    res.send(`Hi $(req.session.user} !`)
-  else {
-    res.redirect('/login')
-  }
-})
+// app.get('/', function (req, res) {
+//   if (req.session.authenticated)
+//     res.send(`Hi $(req.session.user} !`)
+//   else {
+//     res.redirect('/login')
+//   }
+// })
 
 
 app.get('/login/', function (req, res, next) {
@@ -123,10 +123,10 @@ app.get('/timeline/remove/:id', function (req, res) {
 })
 
 
-// app.get('/', function (req, res) {
-//     res.sendFile(__dirname + "/index.html");
+app.get('/', function (req, res) {
+    res.sendFile(__dirname + "/index.html");
 
-// })
+})
 
 // app.get('/contact', function (req, res) {
 //     res.send('Hi there, here is my <a href="mailto:ghong10@bcit.ca"> email </a>.')
